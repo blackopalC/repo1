@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> Dramas-K-Drama Recommendations</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <a href="home.html">🎬 <span>KDrama</span>Picks</a>
+            </div>
+
+            <button class="hamburger" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="dramas.html" class="active">Dramas</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <div class="container">
+
+            <div class="page-title">
+                <h1> <span>12</span> K Dramas You should absolutely watch</h1>
+                <p>Handpicked recommendations - filter by genre to find your next watch!</p>
+            </div>
+
+            <!--filter-->
+            <div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 40px;">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="romance" >💕 Romance</button>
+                <button class="filter-btn" data-filter="comedy" >😂 Comedy</button>
+                <button class="filter-btn" data-filter="thriller">😱 Thriller</button>
+                <button class="filter-btn" data-filter="mystery">🔮 Mystery</button>
+                <button class="filter-btn" data-filter="fantasy">✨ Fantasy</button>
+                <button class="filter-btn" data-filter="slice-of-life">🌿 Slice of Life</button>
+                <button class="filter-btn" data-filter="historical">🏯 Historical</button>
+            </div>
+
+            <!--dramas-->
+            <div class="dramas-grid" id="dramasGrid">
+
+                <!--summerstrike-->
+                <div class="drama-card" data-genres="romance slice-of-life healing">
+                    <div class="drama-card-image"><img 
+                        src="image\summer strike img.jpg"
+                        alt="img" 
+                        class="drama-card-image"
+                    /></div>
+                    <div class="drama-card-body">
+                        <h3>Summer Strike</h3>
+                        <div class="year">2022</div>
+                        <div class="genre-tags">
+                            <span class="genre-tag">Romance</span>
+                            <span class="genre-tag">Slice of Life</span>
+                            <span class="genre-tag">Healing</span>
+                        </div>
+                        <p class="synopsis">
+                            A woman moves to a quiet seaside town after burnout, where she meets a librarian who lives a simple life.
+                        </p>
+                        <div class="rating">⭐⭐⭐⭐⭐</div>
+                        <p class="why-special">
+                           💎  Calm, healing, and quietly emotional like a long exhale after a stressful day. 
+                        </p>
+                         <p class="why-special" style="border-left-color: #f39c12;">
+                            🎯 Best for when: you want something peaceful, comforting, and slow-paced.
+                        </p>
+
+                        <button class="read-more-btn">Read More</button>
+                        <div class="full-description">
+                            <p>
+                                A story about burnout, healing, solitude, self-discovery,
+                                 gentle friendships, and finding meaning in a life without pressure.
+                            </p><br>
+                            <button class="favorite-btn" onclick="toggleFavorite(this)">
+                            <span class="heart">♡</span> 
+                        </button>   
+                        </div>
+                    </div>
+                </div>
+
+                <!--under the qu-->
+                <div class="drama-card" data-genres="historical comedy drama">
+                    <div class="drama-card-image"><img 
+                        src="image\under the queens umbrella img.webp" 
+                        alt="img" 
+                        class="drama-card-image"
+                    /></div>
+                    <div class="drama-card-body">
+                        <h3>Under the Queen's Umbrella</h3>
+                        <div class="year">2022</div>
+                        <div class="genre-tags">
+                            <span class="genre-tag">Historical</span>
+                            <span class="genre-tag">Comedy</span>
+                            <span class="genre-tag">Drama</span>
+                        </div>
+                        <p class="synopsis">
+                            A fierce queen navigates palace politics while protecting her mischievous princes from rivals,pressure and hidden schemes.
+                        </p>
+                        <div class="rating">⭐⭐⭐⭐⭐</div>
+                        <p class="why-special">
+                            💎 A perfect blend of humor, heart, and royal intrigue.
+                        </p>
+                        <p class="why-special" style="border-left-color: #f39c12;">
+                            🎯 Best for when: you want a strong historical drama full of strategy and emotional weight.
+                        </p>
+                        <button class="read-more-btn">Read More</button>
+                        <div class="full-description">
+                            <p>
+                                A story about motherly love, sacrifice, ambition, betrayal, royal rivalry,
+                               court politics, and the fight for survival inside a ruthless palace system.
+                            </p><br>
+                            <button class="favorite-btn" onclick="toggleFavorite(this)">
+                            <span class="heart">♡</span> 
+                        </button>   
+                        </div>
+                    </div>
+                </div>
+
+                <!--twinkling wat-->
+                <div class="drama-card" data-genres="romance fantasy comedy time-travel">
+                    <div class="drama-card-image"><img 
+                        src="image\twinkling wa img.jpg"
+                        alt="img" 
+                        class="drama-card-image"
+                    /></div>
+                    <div class="drama-card-body">
+                        <h3>Twinkling Watermelon</h3>
+                        <div class="year">2023</div>
+                        <div class="genre-tags">
+                            <span class="genre-tag">Romance</span>
+                            <span class="genre-tag">Fantasy</span>
+                            <span class="genre-tag">Comedy</span>
+                            <span class="genre-tag">Time Travel</span>
+                        </div>
+                        <p class="synopsis">
+                            A music-loving high schooler time-travels to 1995 and meets his parents as teenagers.
+                        </p>
+                        <div class="rating">⭐⭐⭐⭐⭐</div>
+                        <p class="why-special">
+                            💎 A perfect mix of heartwarming, hilarious, and nostalgic.
+                        </p>
+                        <p class="why-special" style="border-left-color: #8e44ad;">
+                            🎯 Best for when: You want a feel-good emotional drama with nostalgia and healing vibes.
+                        </p>
+                        <button class="read-more-btn">Read More</button>
+                        <div class="full-description">
+                            <p>
+                               A story of time travel, family bonds, friendship, music, youth romance,
+                                emotional healing wrapped in a nostalgic coming-of-age journey.
+                            </p><br>
+                            <button class="favorite-btn" onclick="toggleFavorite(this)">
+                            <span class="heart">♡</span> 
+                        </button>   
+                        </div>
+                    </div>
+                </div>
+
+                <!--Missing the other -->
+                <div class="drama-card" data-genres="mystery fantasy emotional">
+                    <div class="drama-card-image"><img 
+                        src="image\missing-the-other-side img.jpeg"
+                        alt="img" 
+                        class="drama-card-image"
+                    /></div>
+                    <div class="drama-card-body">
+                        <h3>Missing: The Other Side</h3>
+                        <div class="year">2020</div>
+                        <div class="genre-tags">
+                            <span class="genre-tag">Mystery</span>
+                            <span class="genre-tag">Fantasy</span>
+                            <span class="genre-tag">Emotional</span>
+                        </div>
+                        <p class="synopsis">
+                            A village of missing people - souls who died but were never found , exists in a hidden realm.
+                         </p>
+                        <div class="rating">⭐⭐⭐⭐⭐</div>
+                        <p class="why-special">
+                            💎 Emotionally devastating in the most beautiful way.
+                        </p>
+                        <p class="why-special" style="border-left-color: #8e44ad;">
+                            🎯 Best for when : You're in the mood for a heartfelt mystery that's both 
+                            suspenseful and meaningful.
+                        </p>
+                        <button class="read-more-btn">Read More</button>
+                        <div class="full-description">
+                            <p>
+                                This drama stands out with its original concept and emotional storytelling.
+                                 Each case reveals a touching story about loss,hope,and closure. 
+                            </p><br>
+                            <button class="favorite-btn" onclick="toggleFavorite(this)">
+                            <span class="heart">♡</span> 
+                        </button>   
+                        </div>
+                    </div>
+                </div>
+
+                <!--night has-->
+                <div class="drama-card" data-genres="thriller mystery survival">
+                    <div class="drama-card-image"><img 
+                        src="image\Night_Has_Come img.jpg" 
+                        alt="img" 
+                        class="drama-card-image"
+                    /></div>
+                    <div class="drama-card-body">
+                        <h3>Night Has Come</h3>
+                        <div class="year">2023</div>
+                        <div class="genre-tags">
+                            <span class="genre-tag">Thriller</span>
+                            <span class="genre-tag">Mystery</span>
+                            <span class="genre-tag">Survival</span>
+                        </div>
+                        <p class="synopsis">
+                            A high school class is forced to play a deadly mafia game during a school retreat.
+                        </p>
+                        <div class="rating">⭐⭐⭐⭐⭐</div>
+                        <p class="why-special">
+                            💎  Will keep you on the edge of your seat the entire time.
+                        </p>
+                        <p class="why-special" style="border-left-color: #2c3e50;">
+                            🎯 Best for when: You want intense suspense and plot twists.
+                        </p>
+                        <button class="read-more-btn">Read More</button>
+                        <div class="full-description">
+                            <p>
+                                A gripping story where friendship, betrayal, trust, and survival collide,
+                                 forcing everyone to question who they can truly rely on.
+                            </p><br>
+                            <button class="favorite-btn" onclick="toggleFavorite(this)">
+                            <span class="heart">♡</span> 
+                            </button>        
+                        </div>   
+                    </div>
+                </div>
+
+                <!--death game-->
+                <div class="drama-card" data-genres="thriller fantasy survival">
+                    <div class="drama-card-image"><img 
+                        src="image\deaths game img.jpg"
+                        alt="img" 
+                        class="drama-card-image"
+                    /></div>
+                    <div class="drama-card-body">
+                        <h3>Death's Game</h3>
+                        <div class="year">2023</div>
+                        <div class="genre-tags">
+                            <span class="genre-tag">Thriller</span>
+                            <span class="genre-tag">Fantasy</span>
+                            <span class="genre-tag">Survival</span>
+                        </div>
+                        <p class="synopsis">
+                            A man who takes his own life is given 12 chances to live in different bodies - or face eternal punishment ?
+                        </p>
+                        <div class="rating">⭐⭐⭐⭐⭐</div>
+                        <p class="why-special">
+                            💎 A wild, emotional, and thought-provoking ride.
+                        </p>
+                        <p class="why-special" style="border-left-color: #2c3e50;">
+                            🎯 Best for when: You want something intense and philosophical.
+                        </p>
+                        <button class="read-more-btn">Read More</button>
+                        <div class="full-description">
+                            <p>
+                                Through second chances, loss, redemption, love, and the value of every life,
+                                 the drama explores what it truly means to live before it's too late.
+                            </p><br>
+                            <button class="favorite-btn" onclick="toggleFavorite(this)">
+                            <span class="heart">♡</span> 
+                            </button>   
+                        </div>
+                    </div>
+                </div>
+
+                <!--our blues-->
+                <div class="drama-card" data-genres="slice-of-life romance ">
+                    <div class="drama-card-image"><img 
+                        src="image\our blues.jpg"
+                        alt="img" 
+                        class="drama-card-image"
+                    /></div>
+                    <div class="drama-card-body">
+                        <h3>Our Blues</h3>
+                        <div class="year">2022</div>
+                        <div class="genre-tags">
+                            <span class="genre-tag">Slice of Life</span>
+                            <span class="genre-tag">Romance</span>
+                            <span class="genre-tag">Healing</span>
+                        </div>
+                        <p class="synopsis">
+                            The lives of ordinary people on Jeju Island intertwine, each carrying their own struggles, regrets, and hopes.
+                        </p>
+                        <div class="rating">⭐⭐⭐⭐⭐</div>
+                        <p class="why-special">💎 Comforting, emotional, and deeply relatable.
+                        </p>
+                        <p class="why-special" style="border-left-color: #f39c12;">
+                            🎯 Best for when: you want a slice-of-life drama that feels real and heartfelt
+                        </p>
+                        <button class="read-more-btn">Read More</button>
+                        <div class="full-description">
+                            <p>
+                               A touching portrayal of ordinary lives that deepens our empathy and appreciation for the quiet beauty of being human.
+                            </p><br>
+                        <button class="favorite-btn" onclick="toggleFavorite(this)">
+                            <span class="heart">♡</span> 
+                        </button>                      
+                        </div>
+                    </div>
+                </div>
+
+                <!--my liberation-->
+                <div class="drama-card" data-genres="slice-of-life drama healing">
+                    <div class="drama-card-image"><img 
+                        src="image\my lib notes img.jpg" 
+                        alt="img" 
+                        class="drama-card-image"
+                    /></div>
+                    <div class="drama-card-body">
+                        <h3>My Liberation Notes</h3>
+                        <div class="year">2022</div>
+                        <div class="genre-tags">
+                            <span class="genre-tag">Slice of Life</span>
+                            <span class="genre-tag">Drama</span>
+                            <span class="genre-tag">Healing</span>
+                        </div>
+                        <p class="synopsis">
+                            Three siblings, exhausted by their ordinary monotonous lives, quietly search for happiness and a sense of freedom.
+                        </p>
+                        <div class="rating">⭐⭐⭐⭐⭐</div>
+                        <p class="why-special">
+                            💎 Profound, meditative, and deeply relatable.
+                        </p>
+                        <p class="why-special" style="border-left-color: #27ae60;">
+                            🎯 Best for when: You want a slow, meaningful drama that makes you reflect on life.
+                        </p>
+                        <button class="read-more-btn">Read More</button>
+                        <div class="full-description">
+                            <p>
+                                A story about ordinary, monotonous routine, emotional exhaustion, loneliness, 
+                                quiet healing, self-discovery, and the slow search for meaning and liberation.
+                            </p><br>
+                            <button class="favorite-btn" onclick="toggleFavorite(this)">
+                            <span class="heart">♡</span> 
+                            </button> 
+                        </div>
+                    </div>
+                </div>
+
+                <!--once upona-->
+                <div class="drama-card" data-genres="comedy drama coming-of-age">
+                    <div class="drama-card-image">
+                        <img 
+                        src="image\boyhood.jpg" 
+                        alt="img" 
+                        class="drama-card-image"
+                    />
+                    </div>
+                   <div class="drama-card-body">
+                        <h3>Once Upon a Boyhood</h3>
+                        <div class="year">2023</div>
+                        <div class="genre-tags">
+                            <span class="genre-tag">Comedy</span>
+                            <span class="genre-tag">Drama</span>
+                            <span class="genre-tag">Coming of Age</span>
+                        </div>
+                        <p class="synopsis">
+                            A timid high school student becomes the toughest kid in school after a misunderstanding.
+                        </p>
+                        <div class="rating">⭐⭐⭐⭐⭐</div>
+                        <p class="why-special">
+                            💎 Hilarious, heartwarming, and surprisingly emotional.
+                        </p>
+                        <p class="why-special" style="border-left-color: #f39c12;">
+                            🎯 Best for when: You want to laugh and feel nostalgic.
+                        </p>
+                        <button class="read-more-btn">Read More</button><div class="full-description">
+                            <p>
+                                
+                             A refreshing youth drama that blends humor, school life, and genuine character growth.
+                              With memorable friendships, lovable characters, and a nostalgic atmosphere.  
+                            </p><br>
+                            <button class="favorite-btn" onclick="toggleFavorite(this)">
+                            <span class="heart">♡</span> 
+                            </button> 
+                        </div>
+                    </div>
+                   
+                       
+                </div>
+
+                <!--move to heaven-->
+                <div class="drama-card" data-genres="slice-of-life drama mystery">
+                    <div class="drama-card-image">
+                        <img 
+                        src="image\move to.jpg" 
+                        alt="img" 
+                        class="drama-card-image"
+                    />
+                    </div>
+                   <div class="drama-card-body">
+                        <h3>Move to Heaven</h3>
+                        <div class="year">2023</div>
+                        <div class="genre-tags">
+                            <span class="genre-tag">Slice of life</span>
+                            <span class="genre-tag">Drama</span>
+                            <span class="genre-tag">Mystery</span>
+                        </div>
+                        <p class="synopsis">
+                            A young trauma cleaner and his unlikely partner uncover the untold stories people leave behind after death.
+                        </p>
+                        <div class="rating">⭐⭐⭐⭐⭐</div>
+                        <p class="why-special">
+                            💎  heartwarming, heartbreaking and deeply healing
+                        </p>
+                        <p class="why-special" style="border-left-color: #f39c12;">
+                            🎯 Best for when: You want a touching and meaningful drama
+                        </p>
+                        <button class="read-more-btn">Read More</button><div class="full-description">
+                            <p>
+                                A beautiful portrayal of love, loss, family, healing, compassion, acceptance, and the memories that continue to live on.
+                            </p><br>
+                            <button class="favorite-btn" onclick="toggleFavorite(this)">
+                            <span class="heart">♡</span> 
+                            </button> 
+                        </div>
+                    </div>
+                   
+                       
+                </div>
+                <!--daily dose-->
+                <div class="drama-card" data-genres="slice-of-life ">
+                    <div class="drama-card-image">
+                        <img 
+                        src="image\daily dose.jpg"
+                        alt="img" 
+                        class="drama-card-image"
+                    />
+                    </div>
+                   <div class="drama-card-body">
+                        <h3>Daily Dose of Sunshine</h3>
+                        <div class="year">2023</div>
+                        <div class="genre-tags">
+                            <span class="genre-tag">Slice of life</span>
+                            <span class="genre-tag">Drama</span>
+                            <span class="genre-tag">Medical</span>
+                        </div>
+                        <p class="synopsis">
+                         A kind hearted nurse transfers to a psychiatric ward, where every patient has a story worth understanding.  
+                        </p>
+                        <div class="rating">⭐⭐⭐⭐⭐</div>
+                        <p class="why-special">
+                            💎 Emotional,eye opening, and deeply human
+                        </p>
+                        <p class="why-special" style="border-left-color: #f39c12;">
+                            🎯 Best for when: You want a heartfelt drama about mental health and healing.
+                            But be prepare for some Emotionally heavy moments
+                        </p>
+                        <button class="read-more-btn">Read More</button><div class="full-description">
+                            <p>
+                               A deeply eye-opening portrayal of mental illnesses, emotional struggles, empathy, healing, trauma, resilience, and human connection.                        
+                            </p><br>
+                            <button class="favorite-btn" onclick="toggleFavorite(this)">
+                            <span class="heart">♡</span> 
+                            </button> 
+                        </div>
+                    </div>
+                   
+                       
+                </div>
+                <!--light shop-->
+                <div class="drama-card" data-genres="mystery ">
+                    <div class="drama-card-image">
+                        <img 
+                        src="image\light shop.jpg"
+                        alt="img" 
+                        class="drama-card-image"
+                    />
+                    </div>
+                   <div class="drama-card-body">
+                        <h3>Light Shop</h3>
+                        <div class="year">2023</div>
+                        <div class="genre-tags">
+                            <span class="genre-tag">Mystery</span>
+                            <span class="genre-tag">Horror</span>
+                            <span class="genre-tag">Supernatural</span>
+                        </div>
+                        <p class="synopsis">
+                           A mysterious shop draws in strangers, each carrying secrets and untold stories.
+                        </p>
+                        <div class="rating">⭐⭐⭐⭐⭐</div>
+                        <p class="why-special">
+                            💎 mysterious Emotional and Haunting
+                        </p>
+                        <br>
+                        <p class="why-special" style="border-left-color: #f39c12;">
+                            🎯 Best for when: You want a mystery that slowly unfolds with powerful emotional moments
+                        </p>
+                        <button class="read-more-btn">Read More</button><div class="full-description">
+                            <p>
+                              Beautifully explores grief, hope, regret, healing, human connection,
+                               and the hidden stories people carry, all wrapped in a compelling mystery                        
+                            </p><br>
+                            <button class="favorite-btn" onclick="toggleFavorite(this)">
+                            <span class="heart">♡</span> 
+                            </button> 
+                        </div>
+                    </div>
+                   
+                       
+                </div>
+                   
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>
+                Made with <span class="footer-heart">❤</span> by a K-Drama fanatic 
+                &bull; 2026
+            </p>
+            <div class="footer-links">
+                <a href="home.html">Home</a>
+                <a href="dramas.html">Dramas</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>
